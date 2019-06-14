@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package users;
+
+service UsersService {
+    rpc Register (User) returns (UserAuthenticated) {}
+    rpc Login (UserLogin) returns (UserAuthenticated) {}
+    rpc Authenticate (UserToken) returns (User) {}
+}
+
+message User {
+    string id = 1;
+   string name = 2;
+   string email = 3;
+   string password = 4;
+ }
+
+ message UserLogin {
+     string email = 1;
+     string password = 2;
+ }
+
+ message userToken {
+     string token = 1;
+ }
+
+ message UserAuthenticated {
+     User user = 1;
+     UserToken access_token = 2;
+ }

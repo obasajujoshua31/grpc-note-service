@@ -6,13 +6,19 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "node server/index.js",
+<<<<<<< HEAD
     "client": "node client/get_notes.js"
+=======
+    "client": "node client/get_notes.js",
+    "start": "nodemon server/routes.js"
+>>>>>>> set up .proto
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@grpc/proto-loader": "^0.5.1",
+    "express": "^4.17.1",
     "grpc": "^1.21.1",
     "grpc-caller": "^0.12.0",
     "uuid": "^3.3.2"
