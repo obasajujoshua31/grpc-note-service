@@ -1,11 +1,12 @@
 const express = require('express')
 const mongodb = require('mongodb')
-global.mongoose = require('mongoose')
+const mongoose = require('mongoose')
 const logger = require('morgan')
 const routes = require('./routes')
+const startGrpc = require('./grpc')
 
 const app = express()
-const mongoClient = mongodb.MongoClient()
+
 
 
 mongoose.connect('mongodb://localhost:27017/users-service', {useNewUrlParser: true}).then(() => {
@@ -14,9 +15,6 @@ mongoose.connect('mongodb://localhost:27017/users-service', {useNewUrlParser: tr
     console.log('Unable to connect', error)
 })
 
-module.exports = mongooseConnection = mongoose.connection.once('open', () => {
-    console.log('Connection to DB Initiated');
-  });
 
 app.use(logger('dev'))
 
@@ -41,3 +39,5 @@ app.all('*', (req, res) => {
 app.listen(1002, () => {
     console.log('Server started at port 1002')
 })
+
+startGrpc()

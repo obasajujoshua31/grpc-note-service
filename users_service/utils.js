@@ -31,3 +31,7 @@ module.exports.serverError = (res) => {
         message: 'Unknown Error occurred'
     })
 }
+
+module.exports.verifyToken = (token) => {
+    return jwt.verify(token, jwtSecret)
+}

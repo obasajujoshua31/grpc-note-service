@@ -8,6 +8,7 @@
     "start": "nodemon app.js"
   },
   "dependencies": {
+    "@grpc/proto-loader": "^0.5.1",
     "bcryptjs": "^2.4.3",
     "dotenv": "^8.0.0",
     "express": "^4.17.1",

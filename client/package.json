@@ -1,0 +1,10 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "grpc": "^1.21.1",
+    "grpc-caller": "^0.12.0"
+  }
+}

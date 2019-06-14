@@ -1,5 +1,5 @@
 const utils = require('../utils')
-
+const mongoose = require('mongoose');
   const Schema = mongoose.Schema;
 
   const userSchema = new Schema({
@@ -22,7 +22,8 @@ const utils = require('../utils')
   });
 
 
-  userSchema.methods.isMatch = function(password) {
+
+  userSchema.methods.matchesPassword = function(password) {
         return utils.comparePassword(password, this.password)
   };
 
