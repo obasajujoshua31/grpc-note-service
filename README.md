@@ -2,8 +2,8 @@
 Notes Service GRPC
 
 
-# To Run Server
+### To Run Server
 yarn server
 
-# To Run Client
+### To Run Client
 yarn client
