@@ -16,7 +16,7 @@
   "dependencies": {
     "@grpc/proto-loader": "^0.5.1",
     "express": "^4.17.1",
-    "grpc": "^1.21.1",
+    "grpc": "^1.24.9",
     "grpc-caller": "^0.12.0",
     "uuid": "^3.3.2"
   }
