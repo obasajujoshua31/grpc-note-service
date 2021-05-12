@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "grpc": "^1.21.1",
+    "grpc": "^1.24.9",
     "grpc-caller": "^0.12.0"
   }
 }
